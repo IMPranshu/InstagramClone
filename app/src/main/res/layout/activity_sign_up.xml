@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6AD3EB"
+    tools:context=".SignUp">
+
+    <EditText
+        android:id="@+id/playerName"
+        android:layout_width="207dp"
+        android:layout_height="17dp"
+        android:background="#FFFFFF"
+        android:hint="Enter the Name"
+        android:textColor="#060606"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <EditText
+        android:id="@+id/getPunchSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Enter Punch Speed"
+        android:inputType="number"
+        android:textColor="#060606"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerName" />
+
+    <EditText
+        android:id="@+id/getPunchPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Enter Punch Power"
+        android:inputType="number"
+        android:textColor="#060606"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getPunchSpeed" />
+
+    <EditText
+        android:id="@+id/getKickSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Enter Kick Speed"
+        android:inputType="number"
+        android:textColor="#060606"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getPunchPower" />
+
+    <EditText
+        android:id="@+id/getKickPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Enter Kick Power"
+        android:inputType="number"
+        android:textColor="#060606"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getKickSpeed" />
+
+    <Button
+        android:id="@+id/btnKickBoxer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:onClick="onKickBoxerPressed"
+        android:text="Kick Boxer"
+        android:textColor="#060606"
+        app:layout_constraintEnd_toStartOf="@+id/btnBoxer"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getKickPower" />
+
+    <Button
+        android:id="@+id/btnBoxer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:onClick="onBoxerPressed"
+        android:text="Boxer"
+        android:textColor="#060606"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getKickPower"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
