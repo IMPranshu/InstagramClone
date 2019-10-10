@@ -21,7 +21,7 @@ import java.util.List;
 public class SignUp extends AppCompatActivity {
 
     private EditText playerName,getPunchPower,getPunchSpeed,getKickPower,getKickSpeed;
-    private Button btnkickBoxer,btnboxer;
+    private Button btnkickBoxer,btnboxer,btnTransition;
     private TextView txtGetData,txtGetBoxerData;
 
 
@@ -31,6 +31,7 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        btnTransition= findViewById(R.id.btnNextActivity);
         txtGetBoxerData = findViewById(R.id.txtGetBoxerData);
         playerName=findViewById(R.id.playerName);
         getKickPower=findViewById(R.id.getKickPower);
@@ -46,6 +47,7 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 allKickBoxer = "";
                 ParseQuery<ParseObject> queryAll = ParseQuery.getQuery("KickBoxer_Details");
+                queryAll.whereGreaterThan("Punch_Power",100);
                 queryAll.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {

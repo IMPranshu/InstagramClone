@@ -118,8 +118,8 @@
 
     <TextView
         android:id="@+id/txtGetData"
-        android:layout_width="wrap_content"
-        android:layout_height="284dp"
+        android:layout_width="133dp"
+        android:layout_height="156dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -130,12 +130,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/getKickPower"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.493" />
 
     <TextView
         android:id="@+id/txtGetBoxerData"
-        android:layout_width="wrap_content"
-        android:layout_height="284dp"
+        android:layout_width="116dp"
+        android:layout_height="137dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -143,9 +143,21 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/getKickPower"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.455" />
+
+    <Button
+        android:id="@+id/btnNextActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch to Another Activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getKickPower"
+        app:layout_constraintVertical_bias="0.846" />
 
 </android.support.constraint.ConstraintLayout>
