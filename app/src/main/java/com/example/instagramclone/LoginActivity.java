@@ -1,5 +1,6 @@
 package com.example.instagramclone;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -75,6 +76,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
                 } else {
+
+                    final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
+                    progressDialog.setMessage("Logging In.... ");
+                    progressDialog.show();
                     ParseUser.logInInBackground(edtEmailLogin.getText().toString(), edtPasswordLogin.getText().toString(), new LogInCallback() {
                         @Override
                         public void done(ParseUser user, ParseException e) {
@@ -88,6 +93,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
                             }
+                            progressDialog.dismiss();
                         }
 
 
